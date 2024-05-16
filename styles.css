@@ -1,0 +1,21 @@
+body{
+	background: #121212;
+	color: #ccc;
+	font-family: 'Roboto', sans-serif;
+
+}
+
+h1, h2{
+	color: #ff7597;
+}
+
+.group{
+	display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 1px solid #ccc;
+    align-items: center;
+    max-width: 500px;
+	margin: 20px;
+	border-radius:5px;
+}
