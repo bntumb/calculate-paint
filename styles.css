@@ -1,15 +1,12 @@
 body{
-	background: #121212;
-	color: #ccc;
 	font-family: 'Roboto', sans-serif;
+    overflow: hidden; /* Hide scrollbars */
+    background: #121212;
+    color: #ccc;
 
 }
 
-h1, h2{
-	color: #ff7597;
-}
-
-.group{
+.form-content{
 	display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -18,4 +15,60 @@ h1, h2{
     max-width: 500px;
 	margin: 20px;
 	border-radius:5px;
+	padding: 20px;
 }
+
+#wallDimensions{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+	justify-content: center;
+}
+
+#page-content{
+    display: flex;
+}
+
+#dimensionForm{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #ffee;
+    color: #121212;
+    flex: 0.7;
+    height: 100vh;
+    overflow: scroll;
+    overflow-x: hidden; /* Hide vertical scrollbar */
+    margin: 20px;
+    border-radius: 10px;
+}
+
+div#addWallButton,  input[type=submit] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    background: #ff5797;
+    height: 40px;
+    border: 3px solid #000;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 15px;
+    color: #121212;
+}
+
+#results{
+    flex: 0.3;
+}
+
+.static-object {
+    background-color: #e3a8a8;
+    /* position: fixed; */
+    display: flex;
+    /* position: fixed; */
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
