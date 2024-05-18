@@ -11,20 +11,39 @@
 
 	<div id="page-content">
         <div id="results">
-            <div id="addWallButton">
-                <span> + Add Wall </span>
+            <div>
+                <div id="addWallButton">
+                    <span> Add Another Wall </span>
+                </div>
+                <div id="stats">
+                    <div>
+                        <span> cost</span>
+                       <h1 id="paint-cost"> £ 0.00</h1> 
+                    </div>
+                    <div>
+                        <span> total-area</span>
+                       <h1> 0.0 m &#178;</h1> 
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div id="addWallButton">
+                    <span> save results </span>
+                </div>
             </div>
         </div>
 
-        <form id="dimensionForm">
+        <div  id="dimensionForm">
             <div class="static-object"> 
-                <input type="submit" value="Submit">
-                <h1> Dimensions for Walls</h1>
+                <h1> Describe Your Wall</h1>
+                <div class="button" id="submitData">
+                    <span> Save Wall </span>
+                </div>
             </div>
             <br><br>
             <div id="wallDimensions"> 
             </div>
-        </form>
+        </div>
 
     </div>
 

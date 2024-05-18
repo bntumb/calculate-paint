@@ -10,7 +10,7 @@ body{
 	display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    border: 1px solid #ccc;
+    border: 3px solid #121212;
     align-items: center;
     max-width: 500px;
 	margin: 20px;
@@ -33,9 +33,9 @@ body{
     position: relative;
     display: flex;
     flex-direction: column;
-    background: #ffee;
+    background: #fff;
     color: #121212;
-    flex: 0.7;
+    flex: 0.8;
     height: 100vh;
     overflow: scroll;
     overflow-x: hidden; /* Hide vertical scrollbar */
@@ -43,7 +43,7 @@ body{
     border-radius: 10px;
 }
 
-div#addWallButton,  input[type=submit] {
+div#addWallButton,  .button{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -54,21 +54,39 @@ div#addWallButton,  input[type=submit] {
     border-radius: 20px;
     cursor: pointer;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 12px;
     color: #121212;
+text-transform: uppercase;
+letter-spacing: 2px;
 }
 
-#results{
-    flex: 0.3;
+#results {
+    padding: 20px;
+    flex: 0.2;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    height: 100vh;
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 .static-object {
-    background-color: #e3a8a8;
+    background-color: #fff;
     /* position: fixed; */
     display: flex;
     /* position: fixed; */
-    padding: 20px;
+    padding: 0 20px 0 20px;
+    ;
     align-items: center;
     justify-content: space-between;
 }
 
+#paint-cost{
+    line-height: 0;
+    font-size: 10vh;
+}
