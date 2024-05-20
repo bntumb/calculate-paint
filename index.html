@@ -8,45 +8,52 @@
 		    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
 </head>
 <body>
+<div id="pop-up">
 
+</div>
 	<div id="page-content">
         <div id="results">
-            <div>
-                <div id="addWallButton">
-                    <span> Add Another Wall </span>
+
+            <div id="stats">
+                <div>
+                    <span> Total Cost</span>
+                   <h1 id="paint-cost"></h1> 
                 </div>
-                <div id="stats">
-                    <div>
-                        <span> cost</span>
-                       <h1 id="paint-cost"> £ 0.00</h1> 
+                <div class="flex row">
+
+                    <div >
+
+
+                        <span> Area Covered </span>
+                       <h1 > <span id="total-area"></span>m&#178;</h1> 
                     </div>
-                    <div>
-                        <span> total-area</span>
-                       <h1> 0.0 m &#178;</h1> 
-                    </div>
+
+                   <div>
+                    <span> Litres Needed</span>
+                   <h1 > <span id="total-litres"></span>l</h1> 
+                </div>
                 </div>
             </div>
-            <div class="footer">
-                <div id="addWallButton">
-                    <span> save results </span>
-                </div>
-            </div>
+
+                <div id="pop-up-content">
+                </div>                
         </div>
 
         <div  id="dimensionForm">
             <div class="static-object"> 
-                <h1> Describe Your Wall</h1>
-                <div class="button" id="submitData">
-                    <span> Save Wall </span>
+                <div id="addWallButton">
+                    <span> Add A Wall </span>
                 </div>
             </div>
-            <br><br>
             <div id="wallDimensions"> 
+              
             </div>
         </div>
-
     </div>
 
+    <script src="data.js"></script>
     <script src="script.js"></script>
+    <script src="calculateArea.js"></script>
+    <script src="populateTable.js"></script>
 </body>
 </html>

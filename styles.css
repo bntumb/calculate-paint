@@ -1,21 +1,19 @@
 body{
 	font-family: 'Roboto', sans-serif;
-    overflow: hidden; /* Hide scrollbars */
     background: #121212;
     color: #ccc;
 
 }
 
 .form-content{
-	display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    border: 3px solid #121212;
-    align-items: center;
-    max-width: 500px;
-	margin: 20px;
-	border-radius:5px;
-	padding: 20px;
+
+    width: 100%;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+h1{
+    margin-top: 0;
 }
 
 #wallDimensions{
@@ -35,7 +33,7 @@ body{
     flex-direction: column;
     background: #fff;
     color: #121212;
-    flex: 0.8;
+    flex: 0.3;
     height: 100vh;
     overflow: scroll;
     overflow-x: hidden; /* Hide vertical scrollbar */
@@ -62,7 +60,7 @@ letter-spacing: 2px;
 
 #results {
     padding: 20px;
-    flex: 0.2;
+    flex: 0.7;
     display: flex;
     flex-direction: column;
 
@@ -73,20 +71,77 @@ letter-spacing: 2px;
     position: fixed;
     bottom: 0;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .button{
+    margin: 0 0 10px 0;
 }
 
 .static-object {
-    background-color: #fff;
-    /* position: fixed; */
     display: flex;
-    /* position: fixed; */
-    padding: 0 20px 0 20px;
-    ;
-    align-items: center;
-    justify-content: space-between;
+    padding: 20px 0;
+    width: 100%;
+    justify-content: center;
 }
 
 #paint-cost{
-    line-height: 0;
     font-size: 10vh;
+}
+
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    overflow: hidden;
+}
+   td, th{
+      padding: 10px;
+    }
+    
+
+    th{
+      background-color: #ff5797;
+      color: #121212;
+      font-weight: 100;
+      letter-spacing: 1px;
+    }
+    
+  #pop-up-heading{
+    margin-bottom: 20px;
+  }
+  
+  #pop-up-content {
+    margin: 20px 0;
+    height: 84%;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+  span.tab-button {
+    border: 1px solid #ccc;
+    padding: 10px;
+    min-width: 200px;
+    cursor: pointer;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  .flex.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+#error-message{
+    color: red;
+    font-size: 15px;
 }
