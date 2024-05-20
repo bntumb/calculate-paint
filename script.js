@@ -59,6 +59,13 @@ let inputValidation = () => {
             } else if (key === 'width' && (isNaN(value) || value === "")) {
                 errorMessage = 'Width must be a number';
                 return false;
+			}else if (key === 'excludeHeight' && (isNaN(value) || value === "")) {
+                errorMessage = 'Exclude Height must be a number';
+                return false;
+            }
+			else if (key === 'excludeWidth' && (isNaN(value) || value === "")) {
+                errorMessage = 'Exclude Width must be a number';
+                return false;
             } else if (key === 'units' && (value !== "centimeters" && value !== "inches")) {
                 errorMessage = 'A measurement unit must be selected';
                 return false;
@@ -66,12 +73,21 @@ let inputValidation = () => {
                 errorMessage = 'A shape must be selected';
                 return false;
             }
+			// Retrieve the excludeWidth value if the key is 'width'
+			else if (parseFloat(document.getElementById('ex-width-input').value) >parseFloat( document.getElementById('width-input').value)) {
+					errorMessage = 'Width must be greater than  Exclude Width';
+					return false;
+				
+			}
+			else if (parseFloat(document.getElementById('ex-height-input').value )> parseFloat(document.getElementById('height-input').value)) {
+				errorMessage = 'Height must be greater than  Exclude Height';
+				return false;
+			
+		}
         }
-    }
-    
+    } 
     return true;
 }
-
 
 // Store input data into object the wallData
 let storeInputData = () => {
@@ -96,16 +112,14 @@ let submitData = () => {
 		storeInputData();
 		populateTable();
 		const wall = document.getElementById(`wall-${wallCounter - 1}`);
-		console.log(wallData);
 		wall.remove();
 		document.getElementById('addWallButton').style.display = "flex";
 	}else{
 		document.getElementById("error-message").innerHTML = errorMessage
-
-
 	}
-
 }
+
+
 document.getElementById('addWallButton').addEventListener('click', () => {
 	// Create the main div
 	const formContent = document.createElement('div');
@@ -131,19 +145,7 @@ document.getElementById('addWallButton').addEventListener('click', () => {
 		}
 	}
 
-	const excludeHeading = document.createElement('h2');
-	excludeHeading.textContent = 'Exclude Area';
-	formContent.appendChild(excludeHeading)
 
-	const excludeTip = document.createElement('p');
-	excludeTip.textContent = "Add the height and width of a door or window in the wall as this will help lower the cost"
-	formContent.appendChild(excludeTip)
-
-	for (const key in excludeInputOptions) {
-		if (excludeInputOptions.hasOwnProperty(key)) {
-			appendSelectInput(`${excludeInputOptions[key].id}`, `${excludeInputOptions[key].optionName}`, formContent, `${excludeInputOptions[key].type}`);
-		}
-	}
 	// Create add to list button
 	const buttonContainer = document.createElement('div');
 	buttonContainer.className = 'button';

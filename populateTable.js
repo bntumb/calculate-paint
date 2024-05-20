@@ -19,18 +19,24 @@ function populateTable() {
 		let height = wallInfo.description.height;
         const units =  wallInfo.description.units;
         const colour =  wallInfo.description.colour;
-        const exclude =  wallInfo.description.quality;
         const quality =  wallInfo.description.quality;
         const shape =  wallInfo.description.shape;
+        const exHeight =  wallInfo.description.excludeHeight;
+        const exWidth =  wallInfo.description.excludeWidth;
+		let exclude =  exHeight * exWidth;
+		console.log(exclude);
+
 
 		switch (units){ // convert to meters
 			case "centimeters":
 				width = width/100;
 				height = height/100;
+				exclude = exclude/100
 				break;
 			case "inches":
 				width = width * 0.0254;
 				height = height * 0.0254;
+				exclude = exclude* 0.0254;
 				break;
 		}
 
@@ -49,15 +55,14 @@ function populateTable() {
 		row.insertCell().textContent = wallKey;
 		row.insertCell().textContent = `£${costPerWall.toFixed(2)} `;
 		row.insertCell().textContent = shape;
-		row.insertCell().textContent =  `${width.toFixed(2)}m `;
+		row.insertCell().textContent =  `${width.toFixed(2)}m`;
 		row.insertCell().textContent =  `${height.toFixed(2)}m`;
 		row.insertCell().textContent = quality;
 		row.insertCell().textContent = colour;
-		row.insertCell().textContent = "Exclude";
+		row.insertCell().textContent = `${exclude.toFixed(2)}m² `;
 		row.insertCell().textContent = `${area.toFixed(2)}m² `;
 		row.insertCell().textContent = "Edit";
 
-        console.log(wallInfo.description);
         sumOfArea += area;
 
 		paintCost += costPerWall;

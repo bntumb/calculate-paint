@@ -6,14 +6,10 @@ const defaultInputOptions = {
     width : {id:"width-input", optionName: "Wall Width", type: "input"},
     colour : {id:"colour-select", optionName: "colour", type: "select"},
     quality : {id:"quality-select", optionName: "paint quality", type: "select"}, 
+    excludeHeight :{id:"ex-height-input", optionName: " Exclude Height", type: "input"},
+    excludeWidth : {id:"ex-width-input", optionName: "Exclude Width", type: "input"},
 }
 
-const excludeInputOptions = {
-
-    height : {id:"ex-height-input", optionName: " Height", type: "input"},
-    width : {id:"ex-width-input", optionName: " Width", type: "input"},
-
-}
 
 const quality = [
     { value: 'premium', text: 'Premium (£28 per litre)' },
