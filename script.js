@@ -45,7 +45,7 @@ let appendSelectInput = (id, optionName, appendLocation, inputType) => {
 	appendLocation.appendChild(document.createElement('br'));
 }
 // Input Validation
-export let inputValidation = () => {
+let inputValidation = () => {
     
     for (const key in defaultInputOptions) {
         if (defaultInputOptions.hasOwnProperty(key)) {
@@ -85,7 +85,9 @@ export let inputValidation = () => {
 			
 		}
         }
-    } 
+    }
+	
+ 
     return true;
 }
 
