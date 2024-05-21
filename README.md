@@ -7,6 +7,8 @@ The Paint Calculator is a web-based application designed to help users accuratel
 
 ## Features
 
+![image](https://github.com/bntumb/calculate-paint/assets/51305376/81f6d25f-1ac9-45d5-a31e-1e932709db60)
+
 - **Wall Data Input**: Users can input the width, height, and unique identifier for each wall.
 - **Exclude Areas**: Users can specify areas to exclude from the painting calculation, such as windows or doors.
 - **Dynamic Table Generation**: Displays a detailed table with wall dimensions, excluded areas, and net paintable areas.
@@ -28,7 +30,6 @@ The Paint Calculator is a web-based application designed to help users accuratel
 4. **View Total Litres Needed**:
    - The total litres of paint required will be displayed in the dashboard.
      
-![image](https://github.com/bntumb/calculate-paint/assets/51305376/81f6d25f-1ac9-45d5-a31e-1e932709db60)
 
 
 ## Installation
