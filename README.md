@@ -36,6 +36,6 @@ The Paint Calculator is a web-based application designed to help users accuratel
 ## Installation
 To run the Paint Calculator locally, simply clone the repository and open the index.html file in your web browser:
 
-git clone https://github.com/yourusername/paint-calculator.git
+git clone https://github.com/bntumb/calculate-paint/
 cd paint-calculator
 open index.html
