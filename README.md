@@ -12,6 +12,7 @@ To run the Paint Calculator locally, simply clone the repository and open the in
 git clone https://github.com/bntumb/calculate-paint/
 cd paint-calculator
 open index.html
+```
 ## Features
 
 ![image](https://github.com/bntumb/calculate-paint/assets/51305376/81f6d25f-1ac9-45d5-a31e-1e932709db60)
