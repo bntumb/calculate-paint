@@ -1,5 +1,3 @@
-# calculate-paint
-
 
 # Paint Calculator
 
