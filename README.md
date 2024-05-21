@@ -5,6 +5,13 @@
 
 The Paint Calculator is a web-based application designed to help users accurately estimate the amount of paint needed for their painting projects. By providing dimensions and additional specifications of the walls, the application calculates the total area to be painted, accounting for any areas to exclude such as windows and doors. This tool is ideal for homeowners, painters, and contractors who want to streamline their planning process and avoid overbuying or underbuying paint.
 
+## Installation
+To run the Paint Calculator locally, simply clone the repository and open the index.html file in your web browser:
+
+```bash
+git clone https://github.com/bntumb/calculate-paint/
+cd paint-calculator
+open index.html
 ## Features
 
 ![image](https://github.com/bntumb/calculate-paint/assets/51305376/81f6d25f-1ac9-45d5-a31e-1e932709db60)
@@ -32,9 +39,4 @@ The Paint Calculator is a web-based application designed to help users accuratel
      
 
 
-## Installation
-To run the Paint Calculator locally, simply clone the repository and open the index.html file in your web browser:
 
-git clone https://github.com/bntumb/calculate-paint/
-cd paint-calculator
-open index.html
